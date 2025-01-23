@@ -7,8 +7,7 @@ Kann über controll panell kontroliert werden.
 
 # Material
 - RGB LED Strip
-- Mikrofon
-- Raspberry py
-- Lichtsensor
 - 5V Netzteil
-
+- Mikrofon
+- Lichtsensor
+- Raspberry pi
