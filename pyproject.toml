@@ -1,0 +1,31 @@
+[project]
+name = "nightlight"
+
+version = "0.0.1"
+
+description = "A Programm which implements a nightlight with a Raspberry Pi"
+
+readme = "README.md" 
+
+requires-python = ">=3.13"
+
+#license = {file = "LICENSE"}
+
+authors = [
+  {name = "Samuel Huwiler", email = "Samuel_Huwiler@sluz.ch" }
+  {name = "Anojan Mahendren", email = "Anojan_Mahendren@sluz.ch" }
+]
+
+dynamic = ["dependencies"]
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["dev_requirements.txt"] }}
+
+# This is configuration specific to the `setuptools` build backend.
+# If you are using a different build backend, you will need to change this.
+
+[build-system]
+# These are the assumed default build requirements from pip:
+# https://pip.pypa.io/en/stable/reference/pip/#pep-517-and-518-support
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
