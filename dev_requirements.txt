@@ -2,4 +2,4 @@ black
 mypy
 hypothesis
 pytest
-
+types-PyYAML

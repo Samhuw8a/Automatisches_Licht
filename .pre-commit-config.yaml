@@ -15,5 +15,5 @@ repos:
     hooks:
       - id: mypy
         args: [--ignore-missing-imports, --disallow-untyped-calls ]
-        #additional_dependencies: [types-all]
+        additional_dependencies: [types-PyYAML]
         exclude: ^testing/resources/
