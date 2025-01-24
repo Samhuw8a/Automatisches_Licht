@@ -12,7 +12,7 @@ requires-python = ">=3.13"
 license = {file = "LICENSE"}
 
 authors = [
-  {name = "Samuel Huwiler", email = "Samuel_Huwiler@sluz.ch" }
+  {name = "Samuel Huwiler", email = "Samuel_Huwiler@sluz.ch" },
   {name = "Anojan Mahendren", email = "Anojan_Mahendren@sluz.ch" }
 ]
 
