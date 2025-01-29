@@ -1,2 +1,3 @@
 pydantic
 pyyaml
+rpi_ws281x
