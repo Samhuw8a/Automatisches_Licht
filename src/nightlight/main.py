@@ -9,7 +9,7 @@ from nightlight.sensor import LightSensor, ClapSensor
 def main() -> int:
     logger.info("Loading Config")
     config: NightlightConfig = load_config("config.yml")
-    light: Light = Light()
+    light: Light = Light(config)
     light_sensor: LightSensor = LightSensor()
     clap_sensor: ClapSensor = ClapSensor()
 
