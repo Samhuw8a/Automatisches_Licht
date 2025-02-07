@@ -9,7 +9,7 @@ Tutorial: https://github.com/rpi-ws281x/rpi-ws281x-python/blob/master/examples/S
 
 # Material
 - RGB LED Strip Typ: SK6812
-- 5V Netzteil
-- Mikrofon
-- Lichtsensor
+- USB A 2.0 2-Pin 5V Kabel
+- Mikrofon KY-037
+- Lichtsensor VEML7700
 - Raspberry pi
