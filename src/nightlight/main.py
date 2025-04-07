@@ -13,15 +13,15 @@ def main() -> int:
     light_sensor: LightSensor = LightSensor()
     clap_sensor: ClapSensor = ClapSensor()
 
-    # while True:
-    # if clap_sensor.is_triggered() and light_sensor.is_triggered():
-    # logger.info("Enableing light")
-    # light.enable()
-    # logger.debug(f"Sleeping for {config.timeout_time}")
-    # sleep(config.timeout_time)
-    # logger.info("Disabeling light")
-    # light.disable()
-
+    while True:
+        if clap_sensor.is_triggered() and light_sensor.is_triggered():
+            logger.info("Enableing light")
+            light.enable()
+            logger.debug(f"Sleeping for {config.timeout_time}")
+            sleep(config.timeout_time)
+            logger.info("Disabeling light")
+            light.disable()
+        sleep(0.1)
     return 0
 
 

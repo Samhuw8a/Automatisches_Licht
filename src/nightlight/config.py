@@ -10,15 +10,11 @@ class NightlightConfig(BaseModel):
 
     timeout_time: int  # Time for Timeout after activation in seconds
     led_count: int
-    led_pin: int
-    led_frequency: int
-    led_dma: int
     led_brightness: int
-    led_invert: bool
-    led_chanel: int
+    light_limit:int
 
     @validator(
-        "timeout_time", "led_count", "led_pin", "led_frequency", "led_dma", "led_chanel"
+        "timeout_time", "led_count", "light_limit"
     )
     @classmethod
     def is_positiv(cls, value: int) -> int:
@@ -41,10 +37,6 @@ def load_config(path: str) -> NightlightConfig:
     return NightlightConfig(
         timeout_time=conf["timeout_time"],
         led_count=conf["led_count"],
-        led_pin=conf["led_pin"],
-        led_frequency=conf["led_frequency"],
-        led_dma=conf["led_dma"],
         led_brightness=conf["led_brightness"],
-        led_invert=conf["led_invert"],
-        led_chanel=conf["led_chanel"],
+        light_limit=conf["light_limit"],
     )

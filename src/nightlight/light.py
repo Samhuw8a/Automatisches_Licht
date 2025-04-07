@@ -1,28 +1,20 @@
 from __future__ import annotations
 from nightlight.config import NightlightConfig
-from rpi_ws281x import Color, PixelStrip, ws
+from rpi5_ws2812 import Color, WS2812SpiDriver
 
 
 class Light:
     def __init__(self, config: NightlightConfig) -> None:
-        led_strip = ws.SK6812_Strip_RGBW
-        self.strip: PixelStrip = PixelStrip(
-            config.led_count,
-            config.led_pin,
-            config.led_frequency,
-            config.led_dma,
-            config.led_invert,
-            config.led_brightness,
-            config.led_chanel,
-            led_strip,
-        )
-        pass
+        self.strip = WS2812SpiDriver(spi_bus=0, led_count=config.led_count)
+        self.strip.set_brightness(config.led_brightness)
+        self.white: Color = Color(255, 255, 255)
 
     def enable(self) -> None:
-        pass
+        self.strip.set_all_pixels(self.white)
+        self.strip.show()
 
     def disable(self) -> None:
-        pass
+        self.strip.clear()
 
 
 def main() -> int:

@@ -1,7 +1,8 @@
 pydantic
 pyyaml
-rpi_ws281x
+rpi5-ws2812
 board
 gpiozero
 adafruit_blinka
-adafruit-circuitpython-ads1x15
+dafruit-circuitpython-ads1x15
+dafruit-circuitpython-veml7700
