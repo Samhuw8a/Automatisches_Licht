@@ -13,3 +13,8 @@ Tutorial: https://github.com/rpi-ws281x/rpi-ws281x-python/blob/master/examples/S
 - Mikrofon KY-037
 - Lichtsensor VEML7700
 - Raspberry pi
+
+# Pins
+VEML7700 SDA/SCL
+KY-037 GPIO24(Pin 18)
+LIGHT MOSI (Pin 19)

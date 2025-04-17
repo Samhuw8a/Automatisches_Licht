@@ -10,11 +10,12 @@ class NightlightConfig(BaseModel):
 
     timeout_time: int  # Time for Timeout after activation in seconds
     led_count: int
-    led_brightness: int
-    light_limit:int
+    led_brightness: float
+    light_limit: int
+    sensorwait: float
 
     @validator(
-        "timeout_time", "led_count", "light_limit"
+        "timeout_time", "led_count", "light_limit", "sensorwait"
     )
     @classmethod
     def is_positiv(cls, value: int) -> int:
@@ -24,8 +25,8 @@ class NightlightConfig(BaseModel):
 
     @validator("led_brightness")
     @classmethod
-    def is_byte(cls, value: int) -> int:
-        if value < 0 and value > 255:
+    def is_byte(cls, value: float) -> float:
+        if value < 0 and value > 1:
             raise ValueError("only values between 0 and 255 are allowed")
         return value
 
@@ -39,4 +40,5 @@ def load_config(path: str) -> NightlightConfig:
         led_count=conf["led_count"],
         led_brightness=conf["led_brightness"],
         light_limit=conf["light_limit"],
+        sensorwait=conf["sensorwait"],
     )

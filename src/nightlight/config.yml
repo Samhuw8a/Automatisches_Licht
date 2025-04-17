@@ -1,6 +1,7 @@
-timeout_time: 60
+timeout_time: 6
+sensorwait: 0.1
 # LED-Strip config
 led_count: 144
-led_brightness: 128
+led_brightness: 0.5
 # Lichtsensor
 light_limit: 1000
